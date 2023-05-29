@@ -18,6 +18,7 @@ public class SpringCloudGatewayRouting {
                 .route("event-service", r->r.path("/api/**").uri("http://localhost:8088")) //dynamic routing
                 .route("event-service", r->r.path("/api/tag").uri("http://localhost:8088")) //dynamic routing
                 .route("event-service", r->r.path("/notification/**").uri("http://localhost:8088")) //dynamic routing
+                .route("event-service", r->r.path("/comments/**").uri("http://localhost:8088")) //dynamic routing
                 .route("event-service", r->r.path("/push-notifications/**").uri("http://localhost:8088")) //dynamic routing
                 .build();
     }
